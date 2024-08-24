@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme (AppCompat theme) -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:colorBackground">@color/background_light</item>
+
+        <item name="colorPrimary">@color/c1</item>
+        <item name="backgroundColor">@color/b</item>
+        <item name="colorPrimaryVariant">@color/c2</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/t2</item>
+        <item name="colorSecondaryVariant">@color/c2</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="TextView.Light" parent="AppTheme">
+        <item name="android:textColor">@color/t2</item>
+    </style>
+    <style name="AppTextViewStyle">
+        <item name="android:textSize">13dp</item>
+    </style>
+
+
+
+</resources>

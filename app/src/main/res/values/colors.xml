@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="b">#E1F5FE</color>
+    <color name="c1">#2196F3</color>
+    <color name="c2">#FF5100</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="t2">#7F05D5</color>
+    <color name="background_light">#E1F5FE</color>
+
+
+
+
+    <color name="background_dark">#333333</color>
+    <color name="dark_background">#464343</color>
+    <color name="dark_c1">#BB86FC</color>
+    <color name="dark_c2">#FF4400</color>
+    <color name="dark_white">#FFFFFF</color>
+    <color name="dark_t2">#FFFFFF</color>
+    <color name="dark_black">#000000</color>
+</resources>

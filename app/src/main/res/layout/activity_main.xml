@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/c1"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="TRANSVEHROS"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.03"
+            android:textStyle="normal"/>
+
+            <Switch
+                android:id="@+id/darkModeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:checked="false" />
+
+        <Button
+            android:id="@+id/historyButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/baseline_history_24"
+            app:backgroundTint="#FFFFFF"
+            android:contentDescription="Translation history"/>
+
+
+            <Button
+                android:id="@+id/aboutButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:background="@android:drawable/ic_dialog_info"
+                android:onClick="openAboutActivity"
+                app:backgroundTint="#FFFFFF"
+                android:contentDescription="about button"/>
+
+        <Button
+            android:id="@+id/idBtnOptions"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Feedback Button"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/baseline_supervisor_account_24"
+            app:backgroundTint="#FFFFFF" />
+
+
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/wordOfTheDayTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Word of the Day"
+        android:layout_margin="10dp"
+        android:textStyle="italic"/>
+</androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="5dp"
+            app:cardElevation="4dp">
+            <Spinner
+                android:id="@+id/idFromSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/idBtnSwapLanguages"
+            android:layout_width="35dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baseline_swap_horiz_24"
+            android:onClick="onSwapLanguagesClick"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/c2"
+            android:contentDescription="Swap Language Button"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="5dp"
+            app:cardElevation="4dp">
+            <Spinner
+                android:id="@+id/idToSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp">
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:background="@drawable/baseline_clear_24"
+                android:textAllCaps="false"
+                app:backgroundTint="#000000"
+                android:contentDescription="Clear Input text"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:hint="Write here to translate...."
+            android:padding="8dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="@color/c1"
+            app:boxStrokeWidth="2dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idEditSource"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="textImeMultiLine|textMultiLine"
+                style="@style/AppTextViewStyle"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/idBtnPaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:padding="10dp"
+            style="@style/AppTextViewStyle"
+            android:backgroundTint="@color/c1"
+            android:text="PASTE"
+            app:tint="@color/white" />
+        <ImageView
+            android:id="@+id/idIVMic"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_mic"
+            app:tint="@color/c2"
+            android:contentDescription="speak to translate"/>
+
+        <Button
+            android:id="@+id/idBtnTranslate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/c1"
+            android:padding="10dp"
+            style="@style/AppTextViewStyle"
+            android:text="TRANSLATE"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idBtnCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:contentDescription="Copy Button"
+            android:foregroundGravity="center"
+            app:backgroundTint="@color/c2"
+            app:srcCompat="@drawable/baseline_content_copy_24"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="3dp"
+            app:cardElevation="4dp">
+
+
+            <TextView
+                android:id="@+id/idTVTranslatedTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
+                android:padding="16dp"
+                android:layout_margin="3dp"
+                android:text="Translated Text"
+                android:textAlignment="center"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="14dp" />
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</LinearLayout>

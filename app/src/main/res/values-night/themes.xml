@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme (AppCompat theme) for dark mode -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Dark mode attributes -->
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorPrimary">@color/dark_c1</item>
+        <item name="colorPrimaryVariant">@color/dark_c2</item>
+        <item name="colorOnPrimary">@color/dark_white</item>
+
+        <item name="colorSecondary">@color/dark_t2</item>
+        <item name="colorSecondaryVariant">@color/dark_c2</item>
+        <item name="colorOnSecondary">@color/dark_black</item>
+        <!-- To ensure dark mode status bar color is applied -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="TextView.Dark" parent="AppTheme">
+        <item name="android:textColor">@android:color/white</item>
+        <!-- Add other attributes for dark mode TextView here if needed -->
+    </style>
+
+</resources>
